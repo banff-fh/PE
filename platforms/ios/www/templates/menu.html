@@ -9,6 +9,10 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-home" ng-click="goHome()">
+        </button>
+      </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
@@ -22,7 +26,7 @@
         <ion-item menu-close>
           关于我
         </ion-item>
-        <ion-item menu-close>
+        <ion-item menu-close href="#/app/linkman">
           联系人
         </ion-item>
         <ion-item menu-close>

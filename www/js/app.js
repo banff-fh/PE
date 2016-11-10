@@ -33,6 +33,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
     .state('app.mainList', {
       url: '/mainList',
+      disableBack:true,
       cache :false,
       views: {
         'menuContent': {
@@ -43,6 +44,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
     .state('app.linkman', {
       url: '/linkman',
+      disableBack:true,
       cache :false,
       views: {
         'menuContent': {

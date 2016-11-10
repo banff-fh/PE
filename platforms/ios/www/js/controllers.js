@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $location, $ionicHistory ,$window) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -39,18 +39,11 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+  $scope.goHome = function(){
+      $location.path('/PE/www/index.html')
+  }
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
 .controller('mainList', function($scope){
   $scope.mainLists = [
       {img:'img/adam.jpg', id:1, name:'张总', company:'德阳工厂', address:'海宁，浙江，中国',desc:'500公斤皮料已送到，450公斤接收入库，50公斤未接收，2016/10/08',like:3,comments:5},
@@ -61,5 +54,16 @@ angular.module('starter.controllers', [])
   ];
     $scope.userName = '张文文' ;
 })
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+.controller('linkman', function ($scope) {
+    $scope.linkmanLists = [
+        {id:'1',img:'img/adam.jpg',name:'张总',company:'德阳工厂',address:'海宁，浙江，中国'},
+        {id:'2',img:'img/ben.png',name:'小刘',company:'德阳工厂',address:'海宁，浙江，中国'},
+        {id:'3',img:'img/ionic.png',name:'Mike',company:'skytrading',address:'Paloalto,CA,USA'},
+        {id:'4',img:'img/max.png',name:'李四',company:'蓝天公司',address:'上海,中国'},
+        {id:'5',img:'img/mike.png',name:'王总',company:'大海皮料',address:'苏州，江苏，中国'},
+        {id:'6',img:'img/perry.png',name:'张三',company:'苏州希尔顿',address:'苏州 ，江苏，中国'},
+        {id:'7',img:'img/ben.png',name:'王球童',company:'九桥高尔夫',address:'杭州，浙江，中国'},
+        {id:'8',img:'img/perry.png',name:'FabioGrosso',company:'',address:'Turin，Italy'}
+    ]
+    $scope.userName = '张文文' ;
+})
