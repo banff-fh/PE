@@ -1,0 +1,37 @@
+<ion-view view-title="{{userName}}">
+    <ion-content>
+        <div>
+            <div class="content" ng-repeat="linkman in linkmanLists" style="margin-top: -18px;">
+
+                <div class="list card cardupdate">
+
+                    <div class="item item-avatar">
+                        <img ng-src="{{linkman.img}}">
+                        <h2>{{linkman.name}} {{linkman.company}}</h2>
+                        <p>{{linkman.address}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer">
+        <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+            <ion-tab title="" icon-off="ion-ios-plus-outline" icon-on="ion-ios-plus-outline" href="#/app/linkman">
+                <ion-nav-view name="tab-account"></ion-nav-view>
+            </ion-tab>
+            <!--标签-->
+            <ion-tab title="标签" icon-off="ion-pricetag" icon-on="ion-pricetag" href="#/app/linkman">
+                <ion-nav-view name="tab-account"></ion-nav-view>
+            </ion-tab>
+            <!--群聊-->
+            <ion-tab title="群聊" icon-off="ion-chatboxes" icon-on="ion-chatboxes" href="#/app/linkman">
+                <ion-nav-view name="tab-account"></ion-nav-view>
+            </ion-tab>
+            <!--发现-->
+            <ion-tab title="发现" icon-off="ion-android-bulb" icon-on="ion-android-bulb" href="#/app/linkman">
+                <ion-nav-view name="tab-account"></ion-nav-view>
+            </ion-tab>
+        </ion-tabs>
+    </div>
+</ion-view>

@@ -1,0 +1,72 @@
+<ion-view view-title="{{userName}}">
+    <ion-content>
+        <ion-list>
+            <div>
+                <div class="content" ng-repeat="mainList in mainLists" style="margin-top: -18px;">
+
+                    <div class="list card cardupdate">
+
+                        <div class="item item-avatar">
+                            <img ng-src="{{mainList.img}}">
+                            <h2>{{mainList.name}} {{mainList.company}}</h2>
+                            <p>{{mainList.address}}</p>
+                        </div>
+                        <div class="item item-body">
+                            <p>
+                                {{mainList.desc}}
+                            </p>
+                            <p>
+                                <a href="#" class="subdued">{{mainList.like}} 喜欢</a>
+                                <a href="#" class="subdued">{{mainList.comments}} 评论</a>
+                            </p>
+                        </div>
+                        <div class="item tabs tabs-secondary tabs-icon-left">
+                            <a class="tab-item" href="#">
+                                <i class="icon ion-thumbsup"></i>
+                                喜欢
+                            </a>
+                            <a class="tab-item" href="#">
+                                <i class="icon ion-chatbox"></i>
+                                评论
+                            </a>
+                            <a class="tab-item" href="#">
+                                <i class="icon ion-share"></i>
+                                分享
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+    <div class="bar bar-footer" style="margin-left: -6px;">
+        <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+            <!-- Dashboard Tab -->
+            <ion-tab title="添加人员" icon-off="ion-ios-personadd-outline" icon-on="ion-ios-personadd-outline" href="#/tab/dash">
+                <ion-nav-view name="tab-dash"></ion-nav-view>
+            </ion-tab>
+
+            <!-- Chats Tab -->
+            <ion-tab title="信息" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes-outline" href="#/app/linkman">
+                <ion-nav-view name="tab-chats"></ion-nav-view>
+            </ion-tab>
+
+            <!-- Account Tab -->
+            <ion-tab title="" icon-off="ion-ios-plus-outline" icon-on="ion-ios-plus-outline" href="#/tab/account">
+                <ion-nav-view name="tab-account"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="收藏" icon-off="ion-android-favorite-outline" icon-on="ion-android-favorite-outline" href="#/tab/chats">
+                <ion-nav-view name="tab-chats"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="我" icon-off="ion-ios-person-outline" icon-on="ion-ios-person-outline" href="#/tab/chats">
+                <ion-nav-view name="tab-chats"></ion-nav-view>
+            </ion-tab>
+
+
+        </ion-tabs>
+    </div>
+</ion-view>
