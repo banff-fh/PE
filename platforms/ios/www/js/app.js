@@ -53,6 +53,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    .state('app.addPerson', {
+        url: '/addPerson',
+        disableBack:true,
+        cache :false,
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/addPerson.html'
+            }
+        }
+    })
+
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/mainList');
 });

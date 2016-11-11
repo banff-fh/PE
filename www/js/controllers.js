@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('mainList', function($scope){
+.controller('mainList', function($scope,$ionicModal){
   $scope.mainLists = [
       {img:'img/adam.jpg', id:1, name:'张总', company:'德阳工厂', address:'海宁，浙江，中国',desc:'500公斤皮料已送到，450公斤接收入库，50公斤未接收，2016/10/08',like:3,comments:5},
       {img:'img/ben.png', id:2, name:'小刘', company:'德阳工厂', address:'海宁，浙江，中国',desc:'已创建生产，订单号12345678900，2016/10/07',like:2,comments:8},
@@ -50,8 +50,23 @@ angular.module('starter.controllers', [])
       {img:'img/adam.jpg', id:5, name:'张总', company:'德阳工厂', address:'海宁，浙江，中国',desc:'已发布生产服务 PVC，2016/10/04',like:2,comments:8}
   ];
     $scope.userName = '张文文' ;
+
+    $ionicModal.fromTemplateUrl('templates/new-task-main.html', function(modal) {
+        $scope.taskModal = modal;
+    }, {
+        scope: $scope
+    });
+
+    $scope.newTask = function() {
+        $scope.taskModal.show();
+    };
+
+    $scope.closeNewTask = function() {
+        $scope.taskModal.hide();
+    }
+
 })
-.controller('linkman', function ($scope) {
+.controller('linkman', function ($scope,$location) {
     $scope.linkmanLists = [
         {id:'1',img:'img/adam.jpg',name:'张总',company:'德阳工厂',address:'海宁，浙江，中国'},
         {id:'2',img:'img/ben.png',name:'小刘',company:'德阳工厂',address:'海宁，浙江，中国'},
