@@ -63,6 +63,30 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         }
     })
+    .state('app.aboutMe', {
+        url: '/aboutMe',
+        disableBack:true,
+        cache :false,
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/aboutMe.html',
+                controller: 'aboutMe'
+            }
+        }
+    })
+    .state('app.single', {
+        url: '/editAddress/:id',
+        disableBack:true,
+        cache :false,
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/editAddress.html',
+                controller: 'editAddress'
+            }
+        }
+    })
+
+
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/mainList');

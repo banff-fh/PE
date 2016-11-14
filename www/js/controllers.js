@@ -66,7 +66,7 @@ angular.module('starter.controllers', [])
     }
 
 })
-.controller('linkman', function ($scope,$location) {
+.controller('linkman', function ($scope) {
     $scope.linkmanLists = [
         {id:'1',img:'img/adam.jpg',name:'张总',company:'德阳工厂',address:'海宁，浙江，中国'},
         {id:'2',img:'img/ben.png',name:'小刘',company:'德阳工厂',address:'海宁，浙江，中国'},
@@ -78,4 +78,36 @@ angular.module('starter.controllers', [])
         {id:'8',img:'img/perry.png',name:'FabioGrosso',company:'',address:'Turin，Italy'}
     ]
     $scope.userName = '张文文' ;
+})
+.controller('aboutMe',function ($scope) {
+    $scope.myInfo = { id:'1',name:'张文文',img:'img/ben.png',account:'zhangwenwen',sex:'男',address:'上海市松江区泗凯路61弄20号201室',phone:'15072200010'};
+})
+.controller('editAddress',function ($scope) {
+    $scope.countrys = [
+        {id:'China',name:'中国'},
+        {id:'America',name:'美国'},
+        {id:'Japan',name:'日本'},
+        {id:'Russia',name:'俄罗斯'},
+        {id:'England',name:'英国'},
+        {id:'Canada',name:'加拿大'},
+        {id:'Australian',name:'澳大利亚'}
+    ];
+    $scope.provinces = [
+        {id:'zhejiang',name:'浙江'},
+        {id:'beijing',name:'北京'},
+        {id:'shanghai',name:'上海'},
+        {id:'tianjin',name:'天津'},
+        {id:'chongqing',name:'重庆'},
+    ];
+    $scope.citys = [
+        {id:'hangzhou',name:'杭州'},
+        {id:'ningbo',name:'宁波'},
+        {id:'wenzhou',name:'温州'},
+        {id:'taizhou',name:'台州'},
+        {id:'quzhou',name:'衢州'},
+        {id:'jinhua',name:'金华'}
+    ];
+    $scope.address = '泗凯路61弄20号201室';
+    $scope.phone = '0086 15072200010' ;
+    $scope.emails = 'zhangwenwen1556@163.com';
 })
